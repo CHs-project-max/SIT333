@@ -8,7 +8,7 @@ public class TaskSubmissionServiceTest {
 
     @Test
     public void testValidSubmissionAccepted() {
-        assertEquals("Submission accepted",
+        assertEquals("WRONG",
                 service.submitTask("s123", "9.1P", "My work", false));
     }
 
