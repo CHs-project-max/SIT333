@@ -123,23 +123,18 @@ public class WeatherControllerTest {
 	
 	@Test
 	public void testTemperaturePersist() {
-		/*
-		 * Remove below comments ONLY for 5.3C task.
-		 */
-		System.out.println("+++ testTemperaturePersist +++");
 	
-	    // Arrange
-	    WeatherController wController = WeatherController.getInstance();
-
+	    System.out.println("+++ testTemperaturePersist +++");
+	
 	    // Act
 	    String persistTime = wController.persistTemperature(10, 19.5);
-
+	
 	    System.out.println("Persist time: " + persistTime);
-
+	
 	    // Assert
 	    Assert.assertNotNull(persistTime);
-	    Assert.assertTrue(persistTime.matches("\\d{1,2}:\\d{1,2}:\\d{1,2}"));
-
-	    wController.close();
+	    Assert.assertTrue(
+	        persistTime.matches("\\d{1,2}:\\d{1,2}:\\d{1,2}")
+	    );
 	}
 }
