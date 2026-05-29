@@ -13,7 +13,7 @@ public class TaskSubmissionServiceTest {
 
     @Test
     public void testValidSubmissionAccepted() {
-        assertEquals("Submission",
+        assertEquals("Submission accepted",
                 service.submitTask("s123", "9.1P", "My work", false,
                         validFiles, 3, allowedTypes));
     }
@@ -27,7 +27,7 @@ public class TaskSubmissionServiceTest {
 
     @Test
     public void testEmptyStudentIdRejected() {
-        assertEquals("Invalid student",
+        assertEquals("Invalid student ID",
                 service.submitTask("", "9.1P", "My work", false,
                         validFiles, 3, allowedTypes));
     }
